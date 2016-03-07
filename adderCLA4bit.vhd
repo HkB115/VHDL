@@ -4,19 +4,19 @@ use ieee.std_logic_1164.all;
 entity adderCLA4bit is
  port
   (
-  A    :  in   std_logic_vector(3 downto 0);
-  B    :  in   std_logic_vector(3 downto 0);
-  Cin  :  in   std_logic;
-  S    :  out  std_logic_vector(3 downto 0);
-  Cout :  out  std_logic
+  A    : in   std_logic_vector(3 downto 0);
+  B    : in   std_logic_vector(3 downto 0);
+  Cin  : in   std_logic;
+  S    : out  std_logic_vector(3 downto 0);
+  Cout : out  std_logic
   );
 end adderCLA4bit;
 
 architecture behavioral of adderCLA4bit is
-signal    h_sum           :    std_logic_vector(3 downto 0);
-signal    c_generate     :    std_logic_vector(3 downto 0);
-signal    c_propagate    :    std_logic_vector(3 downto 0);
-signal    c_in_internal  :    std_logic_vector(3 downto 1);
+signal    h_sum         : std_logic_vector(3 downto 0);
+signal    c_generate    : std_logic_vector(3 downto 0);
+signal    c_propagate   : std_logic_vector(3 downto 0);
+signal    c_in_internal : std_logic_vector(3 downto 1);
 begin
  h_sum <= A XOR B;
  c_generate <= A AND B;
