@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package def is
-  component fulladd 
+package deffulladder is
+  component fulladder
     port
       (
       A : in std_logic;
