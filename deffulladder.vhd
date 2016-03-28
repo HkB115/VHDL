@@ -12,4 +12,4 @@ package deffulladder is
       Cout : out std_logic
       );
     end component;
-  end def;
+  end deffulladder;
