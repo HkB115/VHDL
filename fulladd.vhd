@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity fulladd is
+entity fulladder is
   port
     (
     A : in std_logic;
@@ -12,9 +12,9 @@ entity fulladd is
     S : out std_logic;
     Cout : out std_logic
     );
-  end fulladd;
+  end fulladder;
 
-architecture behavior of fulladd is
+architecture behavior of fulladder is
   begin
     S <= A xor B xor Cin;
     Cout <= (A and B) or (Cin and (A or B));
