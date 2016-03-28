@@ -1,8 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-package deffulladder is
-  component fulladder
+package DefFullAdder is
+  component FullAdder
     port
       (
       A : in std_logic;
@@ -12,4 +12,4 @@ package deffulladder is
       Cout : out std_logic
       );
     end component;
-  end deffulladder;
+  end DefFullAdder;
