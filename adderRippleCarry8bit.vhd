@@ -22,13 +22,13 @@ architecture behavior of adderRippleCarry8bit is
     c_generate <= A and B;
     c_propagate <= A or B;
     process (c_generate,c_propagate,c_in_internal)
-    begin
+      begin
       c_in_internal(1) <= c_generate(0) OR (c_propagate(0) and Cin);
       inst: for i in 1 to 6 loop
         c_in_internal(i+1) <= c_generate(i) or (c_propagate(i) and c_in_internal(i));
         end loop;
       Cout <= c_generate(7) or (c_propagate(7) and c_in_internal(7));
-    end process;
+      end process;
     S(0) <= h_sum(0) xor Cin;
     S(7 downto 1) <= h_sum(7 downto 1) XOR c_in_internal(7 downto 1);
   end behavior;
