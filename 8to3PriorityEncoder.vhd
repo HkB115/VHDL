@@ -9,7 +9,7 @@ entity pr_en_8_3 is
     y : out std_logic_vector(2 downto 0);
     z : out std_logic
     );
-end pr_en_8_3;
+  end pr_en_8_3;
 
 architecture priority_enc_arc of pr_en_8_3 is
   begin
