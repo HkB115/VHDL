@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;  
 use ieee.numeric_std.all;
 
-entity pr_en_8_3 is
+entity PriorityEncoder8To3 is
   port
     (
     w : in std_logic_vector(7 downto 0);
     y : out std_logic_vector(2 downto 0);
     z : out std_logic
     );
-  end pr_en_8_3;
+  end PriorityEncoder8To3;
 
-architecture priority_enc_arc of pr_en_8_3 is
+architecture behavior of PriorityEncoder8To3 is
   begin
   process(w)
     begin
@@ -27,4 +27,4 @@ architecture priority_enc_arc of pr_en_8_3 is
     end if;
     end process; 
   z <= '0' when w="00000000" else '1';
-  end priority_enc_arc;
+  end behavior;
