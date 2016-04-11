@@ -18,7 +18,7 @@ signal tmp: std_logic_vector(3 downto 0);
   begin
   process(CLOCK,CLEAR)
     begin
-    if(CLEAR='0')
+    if(CLEAR='1')
       then
       tmp <= "0000";
     elsif(CLOCK'event and CLOCK='1')
