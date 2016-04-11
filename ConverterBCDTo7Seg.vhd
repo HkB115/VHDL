@@ -29,12 +29,7 @@ architecture behavior of ConverterBCDTo7Seg is
         when "0111" => y <= NOT("1110000"); -- 7
         when "1000" => y <= NOT("1111111"); -- 8
         when "1001" => y <= NOT("1110011"); -- 9
-        when "1010" => y <= NOT("1110111"); -- a
-        when "1011" => y <= NOT("0011111"); -- b
-        when "1100" => y <= NOT("1001110"); -- c
-        when "1101" => y <= NOT("0111101"); -- d
-        when "1110" => y <= NOT("1001111"); -- e
-        when "1111" => y <= NOT("1000111"); -- f
+        when others => y <= NOT("0000000");
         end case;
       end if;
     end process;
