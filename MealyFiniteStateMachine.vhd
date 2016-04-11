@@ -20,7 +20,7 @@ signal y: State_type;
     if(Resetn = '1')
       then
       y <= A;
-    elsif(Clock'EVENT and Clock = '1')
+    elsif(Clock'event and Clock = '1')
       then
       case y is
         when A =>
@@ -42,7 +42,7 @@ signal y: State_type;
     end process;
   process(y, W, Clock)
     begin
-    if(Resetn = '0')
+    if(Resetn = '1')
       then
       Z <= '0';
     elsif(Clock'event and Clock = '1')
