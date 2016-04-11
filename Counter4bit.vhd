@@ -9,12 +9,12 @@ entity Counter4bit is
     UP_DOWN: in std_logic;
     CLOCK: in std_logic;
     CLEAR: in std_logic;
-    Q: out std_logic_vector(3 to 0)
+    Q: out std_logic_vector(3 downto 0)
     );
   end Counter4bit;
  
 architecture behavior of Counter4bit is
-signal tmp: std_logic_vector(3 to 0);
+signal tmp: std_logic_vector(3 downto 0);
   begin
   process(CLOCK,CLEAR)
     begin
