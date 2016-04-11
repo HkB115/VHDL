@@ -17,7 +17,7 @@ signal y: State_type;
   begin
   process(Resetn, Clock)
     begin
-    if(Resetn = '0')
+    if(Resetn = '1')
       then
       y <= A;
     elsif(Clock'EVENT and Clock = '1')
