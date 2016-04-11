@@ -7,7 +7,7 @@ entity MooreFiniteStateMachine is
     Clock: in std_logic;
     Resetn: in std_logic;
     W: in std_logic;
-    Z : out std_logic
+    Z: out std_logic
     );
   end MooreFiniteStateMachine;
 
