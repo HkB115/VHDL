@@ -55,6 +55,5 @@ signal y: State_type;
       end case;
     end if;
     end process;
-  Z <= '1' when y = C else '0';
+  Z <= '1' when y = B else '0';
   end behavior;
-  
