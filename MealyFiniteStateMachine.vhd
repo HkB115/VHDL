@@ -24,14 +24,14 @@ signal y: State_type;
       then
       case y is
         when A =>
-          if(w = '0')
+          if(W = '0')
             then
             y <= A;
           else
             y <= B;
           end if;
         when B =>
-          if(w = '0')
+          if(W = '0')
             then
             y <= A;
           else
@@ -55,5 +55,5 @@ signal y: State_type;
       end case;
     end if;
     end process;
-  Z <= '1' when y = B else '0';
   end behavior;
+  
